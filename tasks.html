@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Sidebar Template</title>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%; /* Full height of the sidebar */
+    background-color: #333;
+    color: white;
+    position: fixed;
+    left: -250px; /* Hide sidebar initially */
+    transition: left 0.3s ease;
+    padding: 20px;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    margin-left: 0; /* Adjust margin when sidebar is open */
+    padding: 20px;
+    flex-grow: 1;
+    max-width: calc(100% - 250px); /* Adjust max width based on sidebar */
+    margin-left: 250px; /* Adjust margin when sidebar is open */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.toggle-btn {
+    cursor: pointer;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.open {
+    left: 0; /* Show sidebar */
+}
+
+.close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 0 0 1em; /* Add margin for paragraphs */
+    line-height: 1.6; /* Improve line height for readability */
+}
+
+a {
+    word-wrap: break-word; /* Allow long URLs to wrap */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <a href="#" class="close-btn" id="close-btn">×</a>
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="toggle-btn" id="toggle-btn">☰</div>
+            <h1>Task for Monday the 2nd of December</h1>
+            <p>Hi. Just reminding you all of the bonus task for next week. Please prepare a quick observation about one of the previous presentations.</p>
+            <p>The goal is to stimulate a conversation. Here are some sample reflections I prepared to give you an idea of what I'm looking for.</p>
+			<h1>EXAMPLES</h1>
+            <h2>LAURA</h2>
+            <p>This one was interesting. There’s no direct translation for “Schule Tuter”. I’ve been thinking about it since you talked to us about your work in the second session. Perhaps “Surprise Cone” is the best example.</p>
+            <p>I found one example of this in the US where they included a plush toy at the base of the cone. I have also never seen that before either.</p>
+            <p><a href="https://www.walmart.com/ip/Coco-Surprise-Spritz-the-Unicorn-Plush-Animal-Toy-by-ZURU/267189650">https://www.walmart.com/ip/Coco-Surprise-Spritz-the-Unicorn-Plush-Animal-Toy-by-ZURU/267189650</a>.</p>
+            <p>Another thing that came to me was an earlier western artistic rendering of a dragon from Paulo Uccello. It's one of my favourite paintings - <a href="https://en.wikipedia.org/wiki/Saint_George_and_the_Dragon_(Uccello)">https://en.wikipedia.org/wiki/Saint_George_and_the_Dragon_(Uccello)</a>.</p>
+
+            <h2>HYO JINN</h2>
+            <p>You made a presentation about your collaboration with a friend - bringing game design and interface design together.</p>
+            <p>There are some really cool projects that combine visual art and computer-controlled machines. Are you familiar with Kinetic Sculpture?</p>
+            <p>Here is an example you might like from artist Jumeirah Tide: <a href="https://www.youtube.com/watch?v=NiFSnoJQU7I">https://www.youtube.com/watch?v=NiFSnoJQU7I</a>.</p>
+
+                        <h2>LIA</h2>
+            <p>It’s not easy being the first one, we haven’t forgotten you! There was something about this film that led me to remember another game that was a big feature of my childhood. It made me think of this old computer game my Mother used to play around the time before and after I was born.</p>
+            <p><a href="https://www.youtube.com/watch?v=8UzRYbWkh9M">https://www.youtube.com/watch?v=8UzRYbWkh9M</a></p>
+            <p>The animation style was quite similar and that may have triggered the memory. Anyway, that's just an example observation.</p>
+
+            <h2>NIKLAS</h2>
+            <p>So we could talk about music... A fantastic classic is “Hold Your Horse Is” from 2002, the Hella album with early Zach Hill. You can hear the structural rhythmic foundation of Death Grips.</p>
+            <p><a href="https://www.youtube.com/watch?v=oV6bAZyBtyg&amp;list=PLhhAWnvR7j6NfNzzC_5nFvFV6DIA7HOYt&amp;index=2">https://www.youtube.com/watch?v=oV6bAZyBtyg&amp;list=PLhhAWnvR7j6NfNzzC_5nFvFV6DIA7HOYt&amp;index=2</a></p>
+            <p>I also like the more recent Edward Skeletrix. It has a heavy 'lavender town' type of vibe. This artist is more on the experimental hip-hop side of things but nonetheless - very out there.</p>
+            <p><a href="https://www.youtube.com/watch?v=Heo6UpFJfSg">https://www.youtube.com/watch?v=Heo6UpFJfSg</a></p>
+
+            <h2>HANKA</h2>
+            <p>There’s a relatively recent point-and-click game I really wanted to share here with you and I can’t find its name anymore, I am so annoyed by my amnesia.</p>
+            <p>I love indie games, it’s not really in the point-and-click genre, or any genre for that matter... but have you heard of “Frog Fractions” (2012)?</p>
+            <p><a href="https://twinbeard.itch.io/frog-fractions-game-of-the-decade-edition">https://twinbeard.itch.io/frog-fractions-game-of-the-decade-edition</a></p>
+
+            <h2>CHARLIE</h2>
+            <p>If I can remember correctly you talked about this being the groundwork for an animated film.</p>
+            <p>There’s no better way to casually learn English than watching movies. I recommend a good biography about the writer of the comic “American Splendour” Harvey Pekar. Though he wasn’t one of the illustrators on the comic, he worked with famous artists like Robert Crumb.</p>
+            <p>Here’s the full movie, you can legally stream it on Archive (We are so back):</p>
+            <p><a href="https://archive.org/details/american-splendor-DVD/AMERICANSPLENDOR.iso">https://archive.org/details/american-splendor-DVD/AMERICANSPLENDOR.iso</a></p>
+            <p>Also, I hate Robert Crumb, my favourite illustrator is Raymond Pettibon. :) <a href="https://www.artnet.com/artists/raymond-pettibon/6">https://www.artnet.com/artists/raymond-pettibon/6</a></p>
+
+            <h2>ANNALIA</h2>
+            <p>I know you are a big fan of Art Nouveau. If you want to, you can check out the stained glass artist and illustrator Harry Clarke. Here is a really great article to read with all the illustrations he did for a 1912 edition of E. A. Poe’s Tales, in the Public Domain Review.</p>
+            <p><a href="https://publicdomainreview.org/collection/harry-clarke-s-illustrations-for-poe-s-tales-of-mystery-and-imagination-1919/">https://publicdomainreview.org/collection/harry-clarke-s-illustrations-for-poe-s-tales-of-mystery-and-imagination-1919/</a></p>
+
+
+			<h1>Conclusion</h1>
+                    <p>So those are just examples of some feedback/observations.</p>
+            <p>You can make an additional reference to something that reminds you of their idea/concept/topic and share it briefly with the group.</p>
+            <p>Don't worry about it too much, just take the first thing you thought about during any of the presentations and share it with us next Monday if you can.</p>
+            <p>It can be formal or anecdotal.</p>
+            <p>If you have any more questions feel free to send me an email!</p>
+            <p>- Hugh</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('toggle-btn').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        });
+
+        document.getElementById('close-btn').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.remove('open');
+        });
+    </script>
+</body>
+</html>
+
